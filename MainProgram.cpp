@@ -178,15 +178,15 @@ int MyString::find(const MyString& target) const {
     // TODO: Return index of first occurrence of target, or -1 if not found
     // Hint: Use std::string::find, check against string::npos
     size_t pos=data.find(target.data);
-    if(pos=string::npos) return-1;
-    return static_cast<int>(pos);
+    if(pos== string::npos) return-1;
+    return static_cast<int> (pos);
 }
 
 int MyString::count(char ch) const {
     // TODO: Return the number of occurrences of character ch in the string
     int cnt=0;
-    for(char c:data){
-        if(c==ch)cnt++;
+    for(char c: data){
+        if(c==ch) cnt ++;
     }
     return cnt;
 }
