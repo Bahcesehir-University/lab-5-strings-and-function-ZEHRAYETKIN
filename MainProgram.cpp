@@ -127,7 +127,7 @@ MyString MyString::substring(int start, int len) const {
     // Throw std::out_of_range if start is invalid (negative or >= length)
     // Hint: Use std::string::substr()
     
-    if(start<0||start>=len){
+    if(start<0||start>=static_cast<int>(data.length())){
         throw out_of_range("start cannot be negative or greater than length and equal to length");
     }
     return MyString(data.substr(start,len));
